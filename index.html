@@ -77,21 +77,27 @@
             padding: 3rem 1rem;
         }
         
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            color: var(--primary-color); /* Dark green heading */
+        .hero-logo {
+            width: 180px;
+            height: 180px;
+            margin: 0 auto 2rem;
+            border-radius: 50%;
+            background-color: var(--primary-color);
+            padding: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border: 3px solid white;
         }
         
-        .hero h2.tagline {
-            font-size: 1.8rem;
+        .hero-logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        
+        .hero h1 {
+            font-size: 2.2rem;
             margin-bottom: 1.5rem;
-            color: white;
-            font-weight: normal;
-            padding: 0.5rem 1rem;
-            background-color: var(--primary-color); /* Dark green tagline box */
-            display: inline-block;
-            border-radius: 4px;
+            color: var(--primary-color);
         }
         
         .hero p {
@@ -254,7 +260,7 @@
         
         @media (max-width: 768px) {
             .hero h1 {
-                font-size: 2.5rem;
+                font-size: 2rem;
             }
             
             .feature {
@@ -275,6 +281,11 @@
             .logo {
                 margin: 0 auto;
             }
+            
+            .hero-logo {
+                width: 150px;
+                height: 150px;
+            }
         }
     </style>
 </head>
@@ -292,8 +303,10 @@
     
     <div class="container">
         <section class="hero">
-            <h1>The Chai Guy</h1>
-            <h2 class="tagline">Just a guy who loves chai</h2>
+            <div class="hero-logo">
+                <img src="images/logo.png" alt="The Chai Guy Logo">
+            </div>
+            <h1>Just a guy who loves chai</h1>
             <p>Mobile chai catering serving SF Bay Area & Dallas/TX with authentic, hand-crafted chai that brings the rich flavors and traditions of chai culture directly to you.</p>
             <a href="#contact" class="cta-button">Book Now</a>
         </section>
