@@ -7,10 +7,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
         :root {
-            --primary-color: #0B5716;
-            --secondary-color: #D68C45;
-            --light-color: #F8F4E3;
-            --dark-color: #333333;
+            --primary-color: #0B4016; /* Updated to match your logo's dark green */
+            --secondary-color: #D68C45; /* Orange/amber accent color */
+            --light-color: #F8F4E3; /* Light cream background */
+            --dark-color: #333333; /* Dark text color */
         }
         
         * {
@@ -27,43 +27,50 @@
         }
         
         header {
-            background-color: var(--primary-color);
-            padding: 1rem;
-            text-align: center;
+            background-color: var(--primary-color); /* Dark green header */
+            padding: 0.5rem 2rem; /* Reduced padding */
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
         }
         
         .logo {
-            max-width: 200px;
-            margin: 0 auto;
+            max-width: 80px; /* Smaller logo */
+            margin-right: 1.5rem;
+        }
+        
+        .logo img {
+            width: 100%;
+            height: auto;
         }
         
         nav {
             display: flex;
-            justify-content: center;
-            padding: 1rem 0;
-            background-color: var(--primary-color);
+            gap: 1.5rem;
         }
         
         nav a {
-            color: white;
+            color: white; /* Light text on dark background */
             text-decoration: none;
-            margin: 0 1.5rem;
             font-size: 1.1rem;
             transition: all 0.3s ease;
+            padding-bottom: 0.3rem;
         }
         
         nav a:hover {
-            color: var(--secondary-color);
+            color: var(--secondary-color); /* Orange on hover */
         }
         
         nav a.active {
             border-bottom: 2px solid var(--secondary-color);
+            color: var(--secondary-color);
         }
         
         .container {
             max-width: 1000px;
             margin: 0 auto;
-            padding: 2rem;
+            padding:
+            2rem;
         }
         
         .page-title {
@@ -73,7 +80,7 @@
         
         .page-title h1 {
             font-size: 3rem;
-            color: var(--primary-color);
+            color: var(--primary-color); /* Dark green heading */
             margin-bottom: 1rem;
         }
         
@@ -107,7 +114,7 @@
         
         .service h3 {
             font-size: 1.8rem;
-            color: var(--primary-color);
+            color: var(--primary-color); /* Dark green heading */
             margin-bottom: 1rem;
         }
         
@@ -128,14 +135,14 @@
         }
         
         .service-list li i {
-            color: var(--primary-color);
+            color: var(--primary-color); /* Dark green icon */
             margin-right: 0.5rem;
             transform: translateY(0.2rem);
         }
         
         .cta-button {
             display: inline-block;
-            background-color: var(--primary-color);
+            background-color: var(--primary-color); /* Dark green button */
             color: white;
             padding: 0.8rem 2rem;
             border-radius: 30px;
@@ -147,7 +154,7 @@
         }
         
         .cta-button:hover {
-            background-color: #0A4812;
+            background-color: #0D4F1C; /* Slightly lighter green on hover */
             transform: translateY(-3px);
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
@@ -159,7 +166,7 @@
         
         .instagram-feature h2 {
             font-size: 2rem;
-            color: var(--primary-color);
+            color: var(--primary-color); /* Dark green heading */
             margin-bottom: 2rem;
         }
         
@@ -180,7 +187,7 @@
         
         .booking-section h2 {
             font-size: 2.2rem;
-            color: var(--primary-color);
+            color: var(--primary-color); /* Dark green heading */
             margin-bottom: 1.5rem;
         }
         
@@ -191,7 +198,7 @@
         }
         
         footer {
-            background-color: var(--primary-color);
+            background-color: var(--primary-color); /* Dark green footer */
             color: white;
             text-align: center;
             padding: 2rem;
@@ -212,13 +219,28 @@
             .service {
                 min-width: 100%;
             }
+            
+            header {
+                padding: 0.5rem 1rem;
+                flex-wrap: wrap;
+            }
+            
+            nav {
+                margin-top: 0.5rem;
+                justify-content: center;
+                width: 100%;
+            }
+            
+            .logo {
+                margin: 0 auto;
+            }
         }
     </style>
 </head>
 <body>
     <header>
         <div class="logo">
-            <img src="images/logo.png" alt="The Chai Guy Logo">
+            <img src="logo.png" alt="The Chai Guy Logo">
         </div>
         <nav>
             <a href="index.html">home</a>
@@ -242,7 +264,7 @@
                     <li><i class="fas fa-check-circle"></i> 3 hours of service</li>
                     <li><i class="fas fa-check-circle"></i> Expert chai specialist</li>
                     <li><i class="fas fa-check-circle"></i> All brewing equipment included</li>
-                    <li><i class="fas fa-check-circle"></i> Perfect for 25+ guests</li>
+                    
                 </ul>
                 <a href="#contact" class="cta-button">Book This Package</a>
             </div>
@@ -255,7 +277,7 @@
                     <li><i class="fas fa-check-circle"></i> Insulated dispensers</li>
                     <li><i class="fas fa-check-circle"></i> Eco-friendly cups and supplies</li>
                     <li><i class="fas fa-check-circle"></i> Delivery to your venue</li>
-                    <li><i class="fas fa-check-circle"></i> Minimum order serves 10 guests</li>
+                   
                 </ul>
                 <a href="#contact" class="cta-button">Book This Package</a>
             </div>
