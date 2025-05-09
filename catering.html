@@ -110,6 +110,8 @@
             background-color: white;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            display: flex;              /* Add this line */
+            flex-direction: column;     /* Add this line */
         }
         
         .service h3 {
@@ -152,7 +154,10 @@
             transition: all 0.3s ease;
             margin-top: 1rem;
         }
-        
+        .service .cta-button {
+            margin-top: auto; /* This pushes the button to the bottom */
+            align-self: center; /* This centers the button horizontally */
+        }
         .cta-button:hover {
             background-color: #0D4F1C; /* Slightly lighter green on hover */
             transform: translateY(-3px);
@@ -240,7 +245,7 @@
 <body>
     <header>
         <div class="logo">
-            <img src="logo.png" alt="The Chai Guy Logo">
+            <img src="images/logo.png" alt="The Chai Guy Logo">
         </div>
         <nav>
             <a href="index.html">home</a>
