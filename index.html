@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Chai Guy | Mobile Chai Catering | SF Bay Area/DTX</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #0B5716;
+            --secondary-color: #D68C45;
+            --light-color: #F8F4E3;
+            --dark-color: #333333;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--light-color);
+            color: var(--dark-color);
+            line-height: 1.6;
+        }
+        
+        header {
+            background-color: var(--primary-color);
+            padding: 1rem;
+            text-align: center;
+        }
+        
+        .logo {
+            max-width: 200px;
+            margin: 0 auto;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: center;
+            padding: 1rem 0;
+            background-color: var(--primary-color);
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1.5rem;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+        
+        nav a:hover {
+            color: var(--secondary-color);
+        }
+        
+        nav a.active {
+            border-bottom: 2px solid var(--secondary-color);
+        }
+        
+        .hero {
+            text-align: center;
+            padding: 3rem 1rem;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+        
+        .hero h2.tagline {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: white;
+            font-weight: normal;
+            padding: 0.5rem 1rem;
+            background-color: #0B5716;
+            display: inline-block;
+            border-radius: 4px;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.8rem 2rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            margin-bottom: 2rem;
+        }
+        
+        .cta-button:hover {
+            background-color: #0A4812;
+            transform: translateY(-3px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .feature {
+            flex: 1;
+            min-width: 300px;
+            max-width: 350px;
+            text-align: center;
+            padding: 1.5rem;
+            border-radius: 10px;
+            background-color: white;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        
+        .feature h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .contact-form {
+            max-width: 600px;
+            margin: 3rem auto;
+            padding: 2rem;
+            background-color: var(--primary-color);
+            border-radius: 10px;
+            color: white;
+        }
+        
+        .location-info {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+        
+        .location-info i {
+            color: var(--secondary-color);
+            margin-right: 0.5rem;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+        
+        .form-group input, 
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        
+        .submit-button {
+            background-color: var(--secondary-color);
+            color: white;
+            border: none;
+            padding: 0.8rem 2rem;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .submit-button:hover {
+            background-color: #C47A35;
+            transform: translateY(-3px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .instagram-section {
+            margin: 4rem 0;
+            text-align: center;
+        }
+        
+        .instagram-section h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+        }
+        
+        .instagram-section p {
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .instagram-link {
+            display: block;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        
+        .instagram-link img {
+            width: 100%;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+        
+        .instagram-link:hover img {
+            transform: scale(1.02);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .social-icons {
+            margin: 1rem 0;
+        }
+        
+        .social-icons a {
+            color: white;
+            font-size: 1.5rem;
+            margin: 0 0.5rem;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .feature {
+                min-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="The Chai Guy Logo">
+        </div>
+        <nav>
+            <a href="index.html" class="active">home</a>
+            <a href="menu.html">menu</a>
+            <a href="catering.html">catering</a>
+        </nav>
+    </header>
+    
+    <div class="container">
+        <section class="hero">
+            <h1>The Chai Guy</h1>
+            <h2 class="tagline">Just a guy who loves chai</h2>
+            <p>Mobile chai catering serving SF Bay Area & Dallas/TX with authentic, hand-crafted chai that brings the rich flavors and traditions of chai culture directly to you.</p>
+            <a href="#contact" class="cta-button">Book Now</a>
+        </section>
+        
+        <section class="features">
+            <div class="feature">
+                <h3>Mobile Chai Catering</h3>
+                <p>We bring our mobile chai cart to your event, whether it's in the SF Bay Area or Dallas/TX. Perfect for weddings, corporate events, and special gatherings.</p>
+            </div>
+            <div class="feature">
+                <h3>Authentic Recipes</h3>
+                <p>Our chai is brewed using traditional methods and premium ingredients, creating a rich and aromatic experience that honors chai's cultural heritage.</p>
+            </div>
+            <div class="feature">
+                <h3>Personalized Service</h3>
+                <p>From intimate gatherings to large events, we tailor our chai offerings to match your needs, ensuring a memorable experience for you and your guests.</p>
+            </div>
+        </section>
+        
+        <section id="contact" class="contact-form">
+            <h2>Contact Info</h2>
+            <p class="location-info">📍 Serving the SF Bay Area & Dallas/TX</p>
+            <form id="chai-contact-form">
+                <div class="form-group">
+                    <label for="first-name">First name *</label>
+                    <input type="text" id="first-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="last-name">Last name *</label>
+                    <input type="text" id="last-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone number *</label>
+                    <input type="tel" id="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message (optional)</label>
+                    <textarea id="message" rows="4"></textarea>
+                </div>
+                <button type="submit" class="submit-button">Submit</button>
+            </form>
+        </section>
+        
+        <section class="instagram-section">
+            <h2>Follow Us on Instagram</h2>
+            <p>Check out our latest chai adventures and get inspired by our authentic creations.</p>
+            <a href="https://www.instagram.com/officialchaiguy/" target="_blank" class="instagram-link">
+                <img src="images/instagram-preview.jpg" alt="The Chai Guy Instagram">
+            </a>
+        </section>
+    </div>
+    
+    <footer>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/officialchaiguy/" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+        <p>&copy; 2025 The Chai Guy. All rights reserved.</p>
+        <p>officialchaiguy.com</p>
+    </footer>
+
+    <script>
+        document.getElementById('chai-contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your interest! We will get back to you soon.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>

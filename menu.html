@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Chai Guy | Menu | SF Bay Area/DTX</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #0B5716;
+            --secondary-color: #D68C45;
+            --light-color: #F8F4E3;
+            --dark-color: #333333;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--light-color);
+            color: var(--dark-color);
+            line-height: 1.6;
+        }
+        
+        header {
+            background-color: var(--primary-color);
+            padding: 1rem;
+            text-align: center;
+        }
+        
+        .logo {
+            max-width: 200px;
+            margin: 0 auto;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: center;
+            padding: 1rem 0;
+            background-color: var(--primary-color);
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1.5rem;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+        
+        nav a:hover {
+            color: var(--secondary-color);
+        }
+        
+        nav a.active {
+            border-bottom: 2px solid var(--secondary-color);
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .page-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .page-title h1 {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .page-title p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .menu-section {
+            margin-bottom: 4rem;
+        }
+        
+        .menu-items {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 3rem;
+        }
+        
+        .menu-item {
+            flex: 1;
+            min-width: 300px;
+            max-width: 400px;
+            padding: 2rem;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        
+        .menu-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+        }
+        
+        .menu-item h3 {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .menu-item p {
+            margin-bottom: 1.5rem;
+            color: #666;
+        }
+        
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .social-icons {
+            margin: 1rem 0;
+        }
+        
+        .social-icons a {
+            color: white;
+            font-size: 1.5rem;
+            margin: 0 0.5rem;
+        }
+        
+        @media (max-width: 768px) {
+            .menu-item {
+                min-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="The Chai Guy Logo">
+        </div>
+        <nav>
+            <a href="index.html">home</a>
+            <a href="menu.html" class="active">menu</a>
+            <a href="catering.html">catering</a>
+        </nav>
+    </header>
+    
+    <div class="container">
+        <section class="page-title">
+            <h1>Our Menu</h1>
+            <p>Simple, authentic chai made with premium ingredients and traditional methods</p>
+        </section>
+        
+        <section class="menu-items">
+            <div class="menu-item">
+                <img src="images/hot-chai.jpg" alt="Hot Chai">
+                <h3>Hot Chai</h3>
+                <p>Our signature masala chai brewed with premium black tea, fresh ginger, cardamom, cinnamon, and other aromatic spices. Served hot with your choice of milk.</p>
+            </div>
+            
+            <div class="menu-item">
+                <img src="images/iced-chai.jpg" alt="Iced Chai">
+                <h3>Iced Chai</h3>
+                <p>A refreshing cold version of our traditional masala chai. Perfectly spiced and chilled, served over ice for a cool and invigorating experience.</p>
+            </div>
+        </section>
+    </div>
+    
+    <footer>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/officialchaiguy/" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+        <p>&copy; 2025 The Chai Guy. All rights reserved.</p>
+        <p>officialchaiguy.com</p>
+    </footer>
+</body>
+</html>
